@@ -1,2 +1,4 @@
 .vagrant
+erl_crash.dump
+*.beam
 ebin/
