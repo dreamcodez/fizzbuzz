@@ -10,6 +10,7 @@ end
 
 # other stuff...
 include_recipe 'nodejs'
+include_recipe 'erlang'
 
 # XXX this should perhaps go somewhere else, but for now, i like having this always
 package 'tmux'
