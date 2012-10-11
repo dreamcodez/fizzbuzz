@@ -1,2 +1,2 @@
 #!/bin/sh -e
-erl -pa apps/*/ebin -s fizzbuz
+erl -pa ebin -s myapp_app +v

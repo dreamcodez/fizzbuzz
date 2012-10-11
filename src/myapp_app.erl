@@ -1,19 +1,18 @@
--module(fizzbuzz_app).
+-module(myapp_app).
 
 -behaviour(application).
 
 %% Application callbacks
--export([start/0, start/2, stop/1]).
+-export([start/2, stop/1]).
 
 %% ===================================================================
 %% Application callbacks
 %% ===================================================================
 
-start() ->
-    fizzbuzz_sup:start_link().
-
 start(_StartType, _StartArgs) ->
-    fizzbuzz_sup:start_link().
+    io:put_chars("whee\n"), io:put_chars("wonk\n"),
+    myapp_sup:start_link().
 
 stop(_State) ->
     ok.
+
