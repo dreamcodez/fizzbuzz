@@ -2,8 +2,7 @@ ver = "2.2.0"
 src = "mongodb-src-r#{ver}"
 tarball = "#{src}.tar.gz"
 
-#unless File.file? '/usr/local/bin/erl'
-if true
+unless File.file? '/usr/local/bin/mongo'
   package 'build-essential'
   package 'scons'
 
