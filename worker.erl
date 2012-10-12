@@ -6,6 +6,7 @@ run() ->
 
 run (Cmd, Timeout) ->
   Port = erlang:open_port({spawn_executable, Cmd}, [exit_status]),
+  erlang:display(erlang:port_info(Port)),
   loop(Port, "", Timeout).
 
 loop(Port, OldStream, Timeout) ->

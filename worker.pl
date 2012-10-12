@@ -32,7 +32,11 @@ sub read_msg_or_timeout {
 
 open(my $out, ">", "perl.out") || die $!;
 
+my $pidmsg = "{pid:$$}";
+my $pidmsglen = length($pidmsg);
+
 while (1) {
+  print "$pidmsglen:$pidmsg";
   print "9:heartbeat";
   print "8:amessage";
   print "9:heartbeat";
