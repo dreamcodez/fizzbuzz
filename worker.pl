@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 $| = 1;
-my $timeout = 2;
+my $timeout = 1;
 
 sub read_msg_or_timeout {
   my ($fh) = @_;
@@ -34,8 +34,15 @@ open(my $out, ">", "perl.out") || die $!;
 
 while (1) {
   print "9:heartbeat";
-
-  #print "9:unhandled";
+  print "8:amessage";
+  print "9:heartbeat";
+  print "8:amessage";
+  print "9:heartbeat";
+  print "8:amessage";
+  print "9:heartbeat";
+  print "8:amessage";
+  print "9:heartbeat";
+  print "8:amessage";
 
   my $msg = read_msg_or_timeout(*STDIN);
   if ($msg eq "ping") {
