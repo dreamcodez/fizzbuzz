@@ -9,8 +9,8 @@ unless File.file? '/etc/APT_GET_INITIAL_UPDATE_COMPLETED'
 end
 
 # other stuff...
-#include_recipe 'nodejs'
-#include_recipe 'erlang'
+include_recipe 'nodejs'
+include_recipe 'erlang'
 include_recipe 'mongodb'
 
 # XXX this should perhaps go somewhere else, but for now, i like having this always
