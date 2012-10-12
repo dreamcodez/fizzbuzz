@@ -1,4 +1,4 @@
-ver = 'R14B04'
+ver = 'R15B02'
 src = "otp_src_#{ver}"
 tarball = "#{src}.tar.gz"
 
