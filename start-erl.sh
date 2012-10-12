@@ -1,2 +1,2 @@
 #!/bin/sh
-erlc worker.erl && erl -s worker run
+erlc worker.erl && erl -noshell -s worker run

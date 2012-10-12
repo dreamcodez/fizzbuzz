@@ -35,6 +35,8 @@ open(my $out, ">", "perl.out") || die $!;
 while (1) {
   print "9:heartbeat";
 
+  #print "9:unhandled";
+
   my $msg = read_msg_or_timeout(*STDIN);
   if ($msg eq "ping") {
     print $out "$msg\n";
